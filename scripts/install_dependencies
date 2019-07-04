@@ -1,9 +1,9 @@
 #!/bin/bash
 yum install -y nodejs
-mkdir /var/src/nodejs
-cd /var/src/nodejs
+mkdir -p /opt/src/nodejs
+cd /opt/src/nodejs
 wget https://github.com/baltazzard/application/archive/master.zip
-unzip master.zip
-tar xf node-v12.6.0-linux-x64.tar.xz
+unzip -o master.zip
+rm -rf master*
 cd application-master/
 npm install
