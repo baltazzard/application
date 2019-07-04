@@ -1,5 +1,4 @@
 #!/bin/bash
-yum install -y nodejs
 mkdir -p /opt/src/nodejs
 cd /opt/src/nodejs
 wget https://github.com/baltazzard/application/archive/master.zip
