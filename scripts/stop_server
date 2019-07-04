@@ -1,6 +1,6 @@
 #!/bin/bash
-isExistApp = `pgrep httpd`
+isExistApp = `pgrep npm`
 if [[ -n  $isExistApp ]]; then
-    service httpd stop        
+    npm stop       
 fi
 

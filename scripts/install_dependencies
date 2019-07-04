@@ -1,3 +1,9 @@
 #!/bin/bash
-yum install -y httpd
-
+yum install -y nodejs
+mkdir /var/src/nodejs
+cd /var/src/nodejs
+wget https://github.com/baltazzard/application/archive/master.zip
+unzip master.zip
+tar xf node-v12.6.0-linux-x64.tar.xz
+cd application-master/
+npm install
