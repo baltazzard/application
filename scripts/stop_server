@@ -1,2 +1,2 @@
 #!/bin/bash
-kill $(lsof -i :3000 | grep node | awk '{print $2}') &> /dev/null
+if [[ $(ps -ef|grep npm|grep -v grep) = *npm* ]]; then ps -ef|grep npm|grep -v grep|awk '{print "kill "$2}'|sh -x ; fi
