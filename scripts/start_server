@@ -1,4 +1,4 @@
 #!/bin/bash
 cd /opt/src/nodejs/application-master
-sudo npm start
+sudo npm start &
 
