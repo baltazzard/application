@@ -1,2 +1,0 @@
-#!/bin/bash
-if [[ $(ps -ef|grep npm|grep -v grep) = *npm* ]]; then ps -ef|grep npm|grep -v grep|awk '{print "kill "$2}'|sh -x && exit 0 ; fi
