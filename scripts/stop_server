@@ -1,6 +1,7 @@
 #!/bin/bash
 isExistApp = `pgrep npm`
 if [[ -n  $isExistApp ]]; then
+   cd /opt/src/nodejs/application-master
    sudo npm stop       
 fi
 
