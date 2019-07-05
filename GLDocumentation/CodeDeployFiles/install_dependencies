@@ -1,3 +1,5 @@
 #!/bin/bash
-cd /opt/src/nodejs/application-master/
-npm install
+mkdir /opt/src/nodejs/
+wget https://github.com/baltazzard/application/archive/master.zip
+unzip master.zip -o -d /opt/src/nodejs/
+npm install /opt/src/nodejs/application-master/
