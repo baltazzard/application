@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/src/nodejs/
+    destination: /opt/src/nodejs/application-master/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
