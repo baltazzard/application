@@ -1,4 +1,6 @@
-                _
+ 
+ The InstructionsForEC2Deployments.sh file is the file I used to install basic dependencies in our CentOS machines, including the CodeDeploy client for interaction and a cronjob for auto start the app if a servers gets rebooted.
+ _
             ,.-" "-.,
            /   ===   \
           /  =======  \
