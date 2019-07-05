@@ -1,5 +1,7 @@
 In this folder you will find the diagrams that I made according to the requirements and acceptance criteria given to me.
 
-The CI_CD_DeploymentLogic.drawio.png contains file the flow of what will happens after you push a change in the github repo which will then trigger an update in the code in the deployed machines
-The High_Availability_Diagram.drawio.png shows file the feature of AutoScaling and High Availability. If a server goes down it will be detected by the LB and will trigger a new one to create. If a machine is rebooted then there is crontab that will trigger at boot to start the application.
-The Load_Balancer.drwaio.png file shows the load balancing made to access the application within the HA servers. The Same can be accessed by the following URL http://applicationlbforgl-1835781767.us-west-2.elb.amazonaws.com/login/ 
+* The CI_CD_DeploymentLogic.drawio.png contains file the flow of what will happens after you push a change in the github repo which will then trigger an update in the code in the deployed machines
+
+* The High_Availability_Diagram.drawio.png shows file the feature of AutoScaling and High Availability. If a server goes down it will be detected by the LB and will trigger a new one to create. If a machine is rebooted then there is crontab that will trigger at boot to start the application.
+
+* The Load_Balancer.drwaio.png file shows the load balancing made to access the application within the HA servers. The Same can be accessed by the following URL http://gllb2-675245980.us-west-2.elb.amazonaws.com:3000/login/
