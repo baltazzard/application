@@ -1,12 +1,38 @@
 Version 0.1
-Thank you for considering me for this position for Senior DevOps engineer at GorillaLogic! I'm very grateful even with this test as it has helped me sharpen my skills and I really enjoy doing it.
+
+Thank you for considering me for this position for Senior DevOps engineer at GL! I'm very grateful even with this test as it has helped me sharpen my skills and I really enjoyed working on it.
 
 This README file will contain a summary of what I have done and the challenges I faced while doing this test. Documentation for each of the files I used on CodeDeploy can be found on its respective folder within the GLDocumentation directory.
 
-
-
 ##The InstructionsForEC2Deployments.sh file is the file I used to install basic dependencies in our CentOS machines, including the CodeDeploy client for interaction and a cronjob for auto start the app if a servers gets rebooted.
- _
+
+For this test I used the AWS Console for everything that is AWS infrastructure, I used CodeDeploy, CodePipeline and for source I used GitHub.
+	In GitHub I forked a branch of Timeoff-management as requested and worked over there for commits and CI, this fork can be found here. https://github.com/baltazzard/application 
+	In regards to the infrastructure. I had created 2 ECS CentOS 7 instances which are under a VPC that can be only accessed by me through SSH and have port 3000 opened for external users. This EC2 were created using AutoScale up to a maximum of 4 to have High Availability feature enabled, with a minimum of 2 servers on different subnets.
+	Also all servers that are created through AutoScale are accessed via a Load Balancer that has only port 3000 enabled which is the one that the application uses which can be accessed by going through this link http://gllb2-675245980.us-west-2.elb.amazonaws.com:3000/login/
+
+The procedure to deploy goes as follows:
+
+	- AutoScale is constantly searching for at least 2 machines available if those are terminated then it will automatically create 2 new CentOS machines with the customized scripts and in a different subnet, with its proper IAM roles and SecurityGroups designated for it.
+	- After a couple of minutes the two instances will be ready and now we can trigger the deployment of the application by just commiting to the master branch of my GitHub Repo.
+	- Commiting in the GitHub repo will trigger the AWS CodePipeline and once authorization is ready with GitHub it will proceed to deploy the application in the folder /opt/src/nodejs/application-master/ using AWS CodeDeploy. 
+	- At the end of the PipeLine execution the application should be running and accessible through the Load balancer on port 3000.
+
+	** If a server gets rebooted I created a cron that will trigger at boot to have the npm start command executed (Since it was not possible to make this to work as a service) for added HA **
+
+Challenges and considerations:
+
+	* There is some kind of error when deploying a stop script to stop npm (Node Js service) that even if I explicitly state I want an exit code of 0 CodePipeline returns an error, its my first time working with NodeJS.
+	* Sometimes npm install command will not run and it ended up being a problem with a local variable on the Linux machines. https://stackoverflow.com/questions/34032751/npm-issue-deploying-a-nodejs-instance-using-aws-codedeploy
+	* Most of the errors I got are related to the NodeJS app but not to the CI/CD deployment.
+
+
+Thank again for considering me!
+	
+Mario
+
+
+
             ,.-" "-.,
            /   ===   \
           /  =======  \
@@ -33,4 +59,4 @@ l.           |     |           .l
    /"-.,__,.-"\   /"-.,__,.-"\"-.,_,.-"\
   |            \ /            |         |
   |             |             |         |
-   \__|__|__|__/ \__|__|__|__/ \_|__|__/ Sandra
+   \__|__|__|__/ \__|__|__|__/ \_|__|__/ 

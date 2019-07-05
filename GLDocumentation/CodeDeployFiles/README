@@ -1,4 +1,4 @@
 On this directory you have the appspect.yml file that has been modified to do a check out before the install of the app and then start the service.
 Starting the service proveed difficult as npm start cannot be started on the background easily and I found that some of my deployments will not start the service.
 
-Also we have script files that will do npm install each time a deployment is called along with a service stop and restart
+Also we have script files that will do npm install each time a deployment is called along with a service stop and restart however for a reason I haven't get yet I cannot stop the process due to process failure even if scripted.
