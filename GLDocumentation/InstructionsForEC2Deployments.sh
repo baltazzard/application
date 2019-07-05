@@ -8,7 +8,7 @@ REGION=$(curl 169.254.169.254/latest/meta-data/placement/availability-zone | sed
 #Install dependencies
 yum update -y
 yum -y install epel-release
-yum -y install ruby wget unzip nodejs
+yum -y install ruby wget unzip lsof nodejs
 
 #Install CodeDeploy software
 cd /home/centos

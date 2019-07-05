@@ -1,2 +1,2 @@
 #!/bin/bash
-jobs -p | xargs kill
+kill $(lsof -i :3000 | grep node | awk '{print $2}') &> /dev/null
