@@ -1,4 +1,3 @@
 #!/bin/bash
 cd /opt/src/nodejs/application-master
-sudo npm start &
-
+nohup npm start > /dev/null 2>&1 &
