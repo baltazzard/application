@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/src/nodejs/application-master/
+    destination: /opt/src/nodejs/application-master/
 hooks:
-  BeforeInstall:
+  Install:
     - location: scripts/install_dependencies
       timeout: 300
       runas: root
