@@ -1,4 +1,4 @@
-Version 0.1
+Version 0.2
 
 Thank you for considering me for this position for Senior DevOps engineer at GL! I'm very grateful even with this test as it has helped me sharpen my skills and I really enjoyed working on it.
 
@@ -22,9 +22,9 @@ The procedure to deploy goes as follows:
 
 Challenges and considerations:
 
-	* There is some kind of error when deploying a stop script to stop npm (Node Js service) that even if I explicitly state I want an exit code of 0 CodePipeline returns an error, its my first time working with NodeJS.
-	* Sometimes npm install command will not run and it ended up being a problem with a local variable on the Linux machines. https://stackoverflow.com/questions/34032751/npm-issue-deploying-a-nodejs-instance-using-aws-codedeploy
-	* Most of the errors I got are related to the NodeJS app but not to the CI/CD deployment.
+	* Sometimes npm install command will not run and although the PipeLine will deploy succesfully without npm install successfully ran, the service will not start so I have to start it manually. https://stackoverflow.com/questions/34032751/npm-issue-deploying-a-nodejs-instance-using-aws-codedeploy https://forums.aws.amazon.com/thread.jspa?threadID=238141
+	* As a proof of concept once npm install is ran if you reboot the server the application will works and be reachable through the load balancer.
+	* Most of the errors I got are related to the NodeJS app but not to the CI/CD deployment.	
 
 
 Thank again for considering me!
