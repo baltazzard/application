@@ -2,7 +2,7 @@ Version 0.2
 
 Thank you for considering me for this position for Senior DevOps engineer at GL! I'm very grateful even with this test as it has helped me sharpen my skills and I really enjoyed working on it.
 
-This README file will contain a summary of what I have done and the challenges I faced while doing this test. Documentation for each of the files I used on CodeDeploy can be found on its respective folder within the GLDocumentation directory.
+This README file will contain a summary of what I have done and the challenges I faced while doing this test. Documentation for each of the files I used on CodeDeploy can be found on its respective folder within the GLDocumentation directory which are CodeDeployFiles and Diagrams respectively.
 
 ##The InstructionsForEC2Deployments.sh file is the file I used to install basic dependencies in our CentOS machines, including the CodeDeploy client for interaction and a cronjob for auto start the app if a servers gets rebooted.
 
