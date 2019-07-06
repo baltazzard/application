@@ -1,2 +1,3 @@
 #!/bin/bash
-npm install /opt/src/nodejs/application-master/
+cd /opt/src/nodejs/application-master/
+nohup npm install > /dev/null 2>&1 &
